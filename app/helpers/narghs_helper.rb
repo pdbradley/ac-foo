@@ -1,0 +1,2 @@
+module NarghsHelper
+end

@@ -1,0 +1,14 @@
+<%= turbo_stream_from "dinushka" %>
+
+<h1>Stream</h1>
+
+<% Nargh.all.each do |n| %>
+  <hr>
+  <p id="<%= dom_id n %>" class=foo>
+    <%= n.name %>
+    <%= link_to "Remove", nargh_path(n), method: :delete %>
+  </p>
+<% end %>
+
+
+<%# <%= link_to "Remove first nargh", narghs_destroy_path, method: :delete %>

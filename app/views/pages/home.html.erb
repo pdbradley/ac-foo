@@ -1,0 +1,39 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<input name="foo" />
+
+<%= link_to "About", '/pages/about' %>
+
+<hr>
+
+<turbo-frame id="nargh">
+  <h1> hey nargh </h1>
+  <%= link_to "About", '/pages/about' %>
+  <br>
+  <%= link_to "New About", '/pages/about', target: "_top" %>
+  <br>
+  <%= link_to "reload home frame", '/pages/home' %>
+  <br>
+  <%= link_to "reload home page", '/pages/home', target: '_top' %>
+</turbo-frame>
+
+<hr>
+<turbo-frame id="foo">
+  <h1> hey ffoo </h1>
+</turbo-frame>
+
+<hr>
+<turbo-frame id="users" src="/pages/users">
+  loading...
+</turbo-frame>
+
+<hr>
+<h2>data-turbo-frame thing</h2>
+
+<a href="/pages/warning" data-turbo-frame="foo"> Load warning within current frame </a>
+
+<form data-turbo-frame="foo">
+   input > name
+   submit
+   --> show had frames of the thing
